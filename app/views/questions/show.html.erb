@@ -1,7 +1,12 @@
 <p>
   <strong>Text:</strong>
   <%= @question.text %>
-  
+
 </p>
 <%= link_to 'Edit', edit_question_path(@question) %>
 <%= link_to 'Back', questions_path %>
+
+<hr>
+<h3>Comments:</h3>
+<%=render 'comments/form'%>
+<%= render @question.comments%>
