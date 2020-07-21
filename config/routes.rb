@@ -5,7 +5,15 @@ Rails.application.routes.draw do
   get 'questions/index'
   root to: "questions#index"
 
-  resources :questions
+  resources :questions do
+    member do
+     post :favourite
+   end
+   collection do
+   end
+  end
+
   resources :comments, only: [:create]
+  resource :profile, controller: :profile, only: [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

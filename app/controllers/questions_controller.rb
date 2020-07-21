@@ -46,11 +46,23 @@ end
     redirect_to questions_path
   end
 
+  def favourite
+    if select = current_user.favourites.find_by(question_id: question.id)
+      select.destroy
+    else
+      current_user.questions << question
+    end
+    redirect_back(fallback_location: root_path)
+  end
+
 
   private
   def question_params
     params.require(:question).permit(:text)
 
+  end
+  def question
+    @question ||= Question.find(params[:id])
   end
 
 end
