@@ -1,0 +1,12 @@
+<h4><%= question.text %></h4>
+<div class="buttons">
+  <span>
+    <%= link_to  (user_signed_in? && question.favourites.exists?(user_id: current_user.id)) ? "remove from f" : "add to f", favourite_question_path(question), method: :post %>
+  </span>
+  <span><%= link_to 'Show', question_path(question), class: 'btn btn-success' %></span>
+  <span><%= link_to 'Edit', edit_question_path(question), class: 'btn btn-info' %></span>
+  <span><%= link_to 'Destroy', question_path(question),
+          method: :delete,
+          data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></span>
+
+</div>

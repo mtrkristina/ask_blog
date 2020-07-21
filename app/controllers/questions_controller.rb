@@ -20,7 +20,7 @@ end
 
   def create
     @question = Question.new(question_params)
-
+    question.user = current_user
     if @question.save
       redirect_to @question
     else
@@ -50,7 +50,7 @@ end
     if select = current_user.favourites.find_by(question_id: question.id)
       select.destroy
     else
-      current_user.questions << question
+      Favourite.create(user: current_user, question: question)
     end
     redirect_back(fallback_location: root_path)
   end

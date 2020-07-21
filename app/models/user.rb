@@ -7,5 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :favourites
-  has_many :questions, through: :favourites
+  has_many :favourite_questions, through: :favourites, source: :question
+  has_many :questions
 end
