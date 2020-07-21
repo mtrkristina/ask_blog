@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QuestionsController < ApplicationController
   before_action :authenticate_user!
   def index
@@ -6,37 +8,35 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-
   end
 
   def new
     @question = Question.new
-
   end
 
   def edit
-  @question = Question.find(params[:id])
+    @question = Question.find(params[:id])
 end
 
   def create
     @question = Question.new(question_params)
 
-  if @question.save
-    redirect_to @question
-  else
-    render 'new'
+    if @question.save
+      redirect_to @question
+    else
+      render 'new'
 
-  end
+    end
 end
 
   def update
-  @question = Question.find(params[:id])
+    @question = Question.find(params[:id])
 
-  if @question.update(question_params)
-    redirect_to @question
-  else
-    render 'edit'
-  end
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render 'edit'
+    end
 end
 
   def destroy
@@ -55,14 +55,13 @@ end
     redirect_back(fallback_location: root_path)
   end
 
-
   private
+
   def question_params
     params.require(:question).permit(:text)
-
   end
+
   def question
     @question ||= Question.find(params[:id])
   end
-
 end

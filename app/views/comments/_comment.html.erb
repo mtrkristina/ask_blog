@@ -7,7 +7,7 @@ Author: <%=comment.user.email%>
 <div class="text-right">
   <small><%=comment.created_at%></small>
 </div>
-<%= link_to 'Destroy Comment', [comment.question, comment],
+<%= link_to 'Destroy Comment', comment,
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 <hr>
