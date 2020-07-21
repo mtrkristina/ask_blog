@@ -8,10 +8,23 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fondamento:ital@0;1&family=Modak&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,100&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= render "layouts/navbar"%>
-    <%= yield %>
+    <header>
+      <%= render "layouts/navbar"%>
+    
+    </header>
+
+    <div class="main-content">
+      <div class="wrapper">
+
+
+
+          <%= yield %>
+        <%= render "layouts/footer"%>
+      </div>
+    </div>
   </body>
 </html>

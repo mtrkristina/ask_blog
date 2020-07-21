@@ -1,5 +1,5 @@
-<%= form_with model: @comment, url:comments_path, local: true do |form| %>
-<%= f.hidden_field :question_id, value: @question.id%>
+<%= form_for :comment, url:comments_path, local: true do |form| %>
+<%= form.hidden_field :question_id, value: @question.id%>
 
 <div class="form-grup">
   <p>
@@ -7,7 +7,7 @@
   </p>
 </div>
   <p>
-    <%= f.submit :comment, class:"btn btn-success"%>
+    <%= form.submit :comment, class:"btn btn-success"%>
   </p>
 
 <% end %>

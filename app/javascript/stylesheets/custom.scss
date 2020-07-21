@@ -1,3 +1,89 @@
-//.logo{
-//  background: image-url('ask.logo.png');
-//}
+//font-family: 'Bangers', cursive;
+//font-family: 'Fondamento', cursive;
+//font-family: 'Modak', cursive;
+//font-family: 'Roboto', sans-serif;
+$white: #FFFFFF;
+$grey: #F5F8FB;
+$black: #151B26;
+$green: #21C87A;
+$purple:  #92a8d1;
+$light-blue: #87bdd8;
+$blue: #36486b;
+$bg-color: #EF5F07;
+$nav-color: #2F2519;
+
+$primary-font: 'Roboto', sans-serif;
+$logo-font: 'Fondamento', cursive;
+
+$margin: 0px, 200px, 0px, 200px;
+
+$radius: 4px;
+
+body{
+  background-image: url(https://img1.goodfon.ru/wallpaper/nbig/5/43/treugolnik-abstrakciya.jpg);
+  width: 100%;
+//  background-color:$bg-color;
+  font-family: $primary-font;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+
+}
+.main-content{
+  margin: 0px 300px 0px 300px;
+  justify-content: center;
+
+
+}
+header{
+  background-color: $nav-color;
+  border-bottom: groove;
+  border-color: #2F2520;
+    nav{
+      margin: 0px 300px 0px 300px;
+
+
+}
+}
+
+.logo{
+  font-family: $logo-font;
+  font-size: 25px;
+  padding: 0;
+}
+
+.wrapper{
+ background-color: $bg-color;
+ padding: 30px 30px
+//position: absolute;
+
+
+}
+.wrapper h1{
+  text-align: center;
+  mix-blend-mode: overlay;
+  font-size: 50px;
+  //padding-top: 170px;
+  position: center center;
+  justify-content: center;
+}
+
+.buttons{
+  margin: 10px 10px 10px 10px;
+  padding: 5px;
+}
+
+.wrapper{
+//background-image: url(https://images5.alphacoders.com/316/316562.png);
+   min-height: 800px;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.content{
+  height: 1000px;
+  font-family: $primary-font;
+//  background-color: $purple;
+  font-size: 40px;
+}
