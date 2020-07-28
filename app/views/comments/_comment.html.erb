@@ -1,13 +1,17 @@
-<p>
-<%= comment.text%>
-</p>
-<span>
+<h3>
 Author: <%=comment.user.email%>
-</span>
+</h3>
+<h4>
+<%= comment.text%>
+</h4>
+
 <div class="text-right">
-  <small><%=comment.created_at%></small>
+  <small><%=comment.created_at.strftime("%d %a, %Y %H:%M")%></small>
 </div>
-<%= link_to 'Destroy Comment', comment,
+<%= link_to comment_path (comment),
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Are you sure?' } do %>
+               <img src="../destroy.png" alt="destroy" width="32px">
+
+               <%end%>
 <hr>

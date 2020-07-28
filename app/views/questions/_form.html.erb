@@ -1,13 +1,16 @@
 <%= form_for @question, local: true do |form| %>
 
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+  <div class="md-form form-lg">
 
+    <h2>
+      <label for="inputLGEx" class=""></label>
+    </h2>
+    <br>
+    <%= form.text_area :text, class:"form-control form-control-lg" %>
+  </div>
+  <br>
   <p>
-    <%= form.submit "Save", class:"btn btn-primary" %>
+    <%= form.submit "Save", class:"btn btn-outline-light" %>
   </p>
-
 <% end %>

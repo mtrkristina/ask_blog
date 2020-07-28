@@ -1,20 +1,14 @@
 <nav class="navbar">
   <a class="navbar-brand" href="#">
-    <p class="logo">ASK</p>
+    <img src="/logo.jpg" height="40" alt="mdb logo">
   </a>
-  <%= link_to "Questions", root_path, class:"navbar-brand" %>
-  <ul class="nav justify-content-center">
+
+  <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link active" href="#">New Question</a>
+      <%= link_to "New Questions", new_question_path, class:"navbar-brand" %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <%= link_to "Home", questions_path, class:"navbar-brand" %>
     </li>
   </ul>
 
