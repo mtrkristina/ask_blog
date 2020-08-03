@@ -1,18 +1,22 @@
+<div class="show mt-5">
 <h2>
   <strong>Question:</strong>
   <%= @question.text %>
 
 </h2>
 <hr>
-<%= link_to edit_question_path(@question) do %>
-  <img src="../edit.png" alt="edit" width="32px">
-<%end%>
+<div class="icon mt-5">
+  <%= link_to edit_question_path(@question) do %>
+    <img src="../edit.png" alt="edit" width="32px">
+  <%end%>
 
-<%= link_to questions_path do %>
-  <img src="../back.png" alt="back" width="32px">
-<%end%>
+  <%= link_to questions_path do %>
+    <img src="../back.png" alt="back" width="32px">
+  <%end%>
+</div>
 <hr>
 <h3>Comments:</h3>
   <%= render @question.comments%>
 <h3>Add comment:</h3>
   <%=render 'comments/form'%>
+</div>

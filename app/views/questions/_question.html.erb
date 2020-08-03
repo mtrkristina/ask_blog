@@ -1,21 +1,27 @@
 <h4><%= question.text %></h4>
-<div class="buttons d-flex align-items-center" >
-  <span>
-    <%= link_to  (user_signed_in? && question.favourites.exists?(user_id: current_user.id)) ? "remove from f" : "add to f", favourite_question_path(question), method: :post %>
-  </span>
+<div class="navigation">
+  <div class="icon">
+    <%= link_to edit_question_path(question) do %>
+      <img src="edit.png" alt="edit" width="35px">
+    <%end%>
+    <%= link_to question_path(question),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } do %>
+            <img src="destroy.png" alt="destroy" width="35px">
 
-  <%= link_to question_path(question), class: 'button', id:"button-6"  do  %>
+  </div>
+  <div class="icon-1">
+    <%= link_to question_path(question), class: 'button', id:"button-6"  do  %>
+      <div id="spin"></div>
+        <span>Show</span>
+    <%end%>
+
+    <div class="fav">
+      <%= link_to  (user_signed_in? && question.favourites.exists?(user_id: current_user.id)) ? "remove from favourite" : "add to favourite", favourite_question_path(question), method: :post, class: 'button', id:"button-6" %>
+    </div>
     <div id="spin"></div>
-    <span>Show</span>
-  <%end%>
+      <span></span>
+      <%end%>
 
-  <%= link_to edit_question_path(question) do %>
-    <img src="edit.png" alt="edit" width="32px">
-  <%end%>
-  <%= link_to question_path(question),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } do %>
-          <img src="destroy.png" alt="destroy" width="32px">
-
-          <%end%>
+  </div>
 </div>

@@ -2,6 +2,7 @@
 //font-family: 'Fondamento', cursive;
 //font-family: 'Modak', cursive;
 //font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 $white: #FFFFFF;
 $grey: #F5F8FB;
 $black: #151B26;
@@ -16,7 +17,12 @@ $logo-font: 'Fondamento', cursive;
 
 $margin: 0px, 200px, 0px, 200px;
 
-$radius: 4px;
+@media(max-width: 800px){
+  background-color:$blue;
+  background-image: none;
+  margin: 0px 100px 0px 100px;
+}
+
 
 body{
 
@@ -24,6 +30,11 @@ body{
   background-color:$black;
   font-family: $primary-font;
   color: $white;
+  @media(max-width: 800px){
+    background-color:$blue;
+    background-image: none;
+    margin: 0px 20px 0px 20px;
+  }
 
 }
 .main-content{
@@ -100,8 +111,8 @@ header{
 /* Sixth Button */
 .button {
   display: inline-flex;
-  height: 40px;
-  width: 150px;
+  height: 35px;
+  width: 145px;
   border: 2px solid #BFC0C0;
   margin: 20px 20px 20px 20px;
   color: #BFC0C0;
@@ -144,21 +155,68 @@ header{
   background: #BFC0C0;
   transform: rotate(80deg);
 }
-#button-6 span {
+#button-6 span .fav{
   position: relative;
   transition: all .45s ease-Out;
   text-decoration: none;
 }
 
-#button-6:hover span {
+#button-6:hover span .fav{
   color: #3b465e;
 
 }
 
-
-
-.social img{
+.social {
+  padding-right: 50px;
+    img{
   width: 45px;
   height: 45px;
+  margin-right: 35px;
+  }
+}
 
+
+.navigation{
+
+  .icon{
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-left: 10px;
+
+  }
+
+  .icon-1{
+    display: flex;
+
+  }
+  .fav{
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    text-align: center;
+
+  }
+}
+
+
+.footer {
+  margin-top: 125px;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 50px;
+    img{
+      padding-right: 70px;
+    }
+
+}
+.foot{
+  color: #3b465e;
+  padding-right: 50px;
+  display: flex;
+  justify-content: center;
 }
