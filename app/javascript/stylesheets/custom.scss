@@ -63,7 +63,9 @@ header{
      nav{
        display: flex;
        justify-content: flex-end;
-       font-family: $logo-font;
+       font-family: 'Raleway', sans-serif;
+       text-transform: uppercase;
+       text-decoration: none;
        font-size: 20px;
        color: $white;
      }
