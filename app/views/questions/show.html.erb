@@ -1,11 +1,15 @@
 <div class="show mt-5">
-<h2>
-  <strong>Question:</strong>
-  <%= @question.text %>
+  <h3>Question:</h3>
+  <div class="card" style="width: 100%; color:#36486b;">
+    <div class="card-header">
+      <h3><%= @question.user.nickname%></h3>
+    </div>
+    <div class="card-body">
+     <h5><%= @question.text %></h5>
+   </div>
+  </div>
 
-</h2>
-<hr>
-<div class="icon mt-5">
+<div class="icon icon mt-5">
   <%= link_to edit_question_path(@question) do %>
     <img src="../edit.png" alt="edit" width="32px">
   <%end%>
@@ -17,6 +21,7 @@
 <hr>
 <h3>Comments:</h3>
   <%= render @question.comments%>
+  <hr>  
 <h3>Add comment:</h3>
   <%=render 'comments/form'%>
 </div>

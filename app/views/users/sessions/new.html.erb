@@ -1,9 +1,9 @@
-<form class="text-center border border-dark p-5 mt-5" action="#!">
+<div class="form text-center border border-light p-5 mt-5">
 
   <p class="h4 mb-4">Log in</p>
 
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"text-center border border-dark  p-5 mt-5") do |f| %>
   <div class="form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control mb-4" %>
@@ -27,4 +27,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
-</form>
+</div>

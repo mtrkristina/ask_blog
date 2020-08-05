@@ -1,8 +1,7 @@
-<form class="text-center border border-dark  p-5 mt-5" action="#!">
+<div class="form text-center border border-light p-5 mt-5">
+<p class="h4 mb-4 mt-5">Forgot your password?</p>
 
-<p class="h4 mb-4">Forgot your password?</p>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, class:"text-center border border-dark  p-5 mt-5") do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -16,4 +15,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
-</form>
+</div>

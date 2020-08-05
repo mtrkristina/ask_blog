@@ -1,6 +1,20 @@
 <div class="user mt-5">
-  <h2><%=@user.email%></h2>
-    <%= render @questions%>
+
+  <h2 class="nickname"><strong><%=@user.nickname%></strong><br><em>(<%=@user.email%>)</em></h2>
   <hr>
-    <%= render @favourite_questions%>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>My Questions</h3>
+        <%= render @questions%>
+      </div>
+      <div class="col">
+        <h3>Favourite Questions</h3>
+        <%= render @favourite_questions%>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
